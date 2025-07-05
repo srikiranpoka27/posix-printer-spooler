@@ -39,15 +39,6 @@ The spooler program, called `presi`, allows users to queue print jobs, define pr
 - `printers`
 - `quit`
 
-## Project Structure
-
-.
-├── include/ # Header files (definitions, interfaces)
-├── src/ # Source code (.c files)
-├── tests/ # Unit tests
-├── util/ # Printer simulation tools
-├── spool/ # Output and log directory for virtual printers
-└── Makefile # Build system
 
 ## How It Works
 
@@ -67,14 +58,15 @@ PRINTER: id=0, name=alice, type=ps, status=disabled
 
 presi> jobs
 JOB[0]: type=pdf, status=created, eligible=alice, file=foo.pdf
-Known Limitations
+```
+## Known Limitations
 Assumes valid file extensions.
 
 Assumes all conversion tools are available on the system.
 
 No GUI support (CLI only).
 
-Future Improvements
+## Future Improvements
 Add support for prioritizing jobs.
 
 GUI interface using ncurses or a web wrapper.
